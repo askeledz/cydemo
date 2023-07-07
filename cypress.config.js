@@ -6,11 +6,7 @@ module.exports = defineConfig({
     overwrite: false,
     html: false,
     json: true,
-    reportPageTitle: "Test Report",
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-    debug: true,
+    debug: true
   },
   e2e: {
     setupNodeEvents(on, config) {
