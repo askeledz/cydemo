@@ -22,7 +22,7 @@ pipeline {
                 //in case of Win OS use "bat" instead "sh"
                 sh "npm install"
                 //sh "cypress run --env ENV=${env} --env SUITE=${suite} --browser chrome"
-                sh "cypress run --browser chrome"
+                sh "npm run e2e_mochawesome"
             }
         }
         stage('Building'){
