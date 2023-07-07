@@ -6,6 +6,6 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:spec": "cypress run --spec"
+    "cy:spec": "cypress run --reporter mochawesome"
   }
 }
