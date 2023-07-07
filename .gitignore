@@ -2,3 +2,4 @@ node_modules
 cypress/mochawesome-report
 cypress/reports/html
 cypress/videos
+mochawesome-report/
