@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-07T14:08:12.887Z",
-    "end": "2023-07-07T14:08:14.215Z",
-    "duration": 1328,
+    "start": "2023-07-07T13:57:47.097Z",
+    "end": "2023-07-07T13:57:48.496Z",
+    "duration": 1399,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b21558d6-56b7-4fcb-b97c-bc75c9da7ae6",
+      "uuid": "f08e59da-f380-4677-b6be-51e0ad310054",
       "title": "",
       "fullFile": "cypress/e2e/spec.cy.js",
       "file": "cypress/e2e/spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9f00af3b-d1e1-47e1-ac78-5d2a0ad937f7",
+          "uuid": "b20972b3-c8c3-430d-b45d-c4a7a1fecb6c",
           "title": "template spec",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "passes",
               "fullTitle": "template spec passes",
               "timedOut": null,
-              "duration": 521,
+              "duration": 555,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('https://example.cypress.io');\n_elements.elements.title().should('be.visible');\nconsole.log(this.testdata.fullName);",
               "err": {},
-              "uuid": "4e8ed975-ebf8-46ad-8727-7aa85427611d",
-              "parentUUID": "9f00af3b-d1e1-47e1-ac78-5d2a0ad937f7",
+              "uuid": "b3f42fa5-748e-4acd-b70e-606b4cdd8b13",
+              "parentUUID": "b20972b3-c8c3-430d-b45d-c4a7a1fecb6c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4e8ed975-ebf8-46ad-8727-7aa85427611d"
+            "b3f42fa5-748e-4acd-b70e-606b4cdd8b13"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 521,
+          "duration": 555,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -84,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -95,12 +95,15 @@
     "marge": {
       "options": {
         "charts": true,
-        "html": true,
         "reportPageTitle": "Test Report",
         "embeddedScreenshots": true,
         "inlineAssets": true,
         "saveAllAttempts": false,
-        "debug": true
+        "debug": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
       },
       "version": "6.2.0"
     }
