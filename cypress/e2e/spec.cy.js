@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import { elements } from "../fixtures/elements"
+import loginPage from "../support/page-objects/pages/login-page";
 
 var testdata;
 
@@ -10,10 +10,12 @@ describe('template spec', () => {
       this.testdata = testdata
     })
   })
+  
 
   it('passes', function () {
-    cy.visit('https://example.cypress.io');
-    elements.title().should('be.visible');
+    cy.visit('https://d2ufixqq814vug.cloudfront.net/');
+    //elements.logo().should('be.visible');
+    loginPage.sign_in()
     console.log(this.testdata.fullName)
   })
 })
