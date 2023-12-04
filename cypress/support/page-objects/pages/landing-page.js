@@ -1,4 +1,4 @@
-export class loginPage {
+export class landingPage {
 
   elements = {
     help: () => cy.get('.nav-button__help'),
@@ -11,4 +11,4 @@ export class loginPage {
   }
 }
 
-module.exports = new loginPage();
+module.exports = new landingPage();
