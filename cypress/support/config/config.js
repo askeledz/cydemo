@@ -1,0 +1,1 @@
+export const env = 'qa' //If not specified in the CLI, then this takes over

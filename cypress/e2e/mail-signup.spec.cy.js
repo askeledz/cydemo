@@ -2,6 +2,11 @@
 import { recurse } from 'cypress-recurse'
 import landingPage from "../support/page-objects/pages/landing-page";
 import signinPage from "../support/page-objects/pages/signin-page";
+import { Utility } from "../support/utility"
+
+
+//Call getBaseUrl() to get environment specific url value
+const url = new Utility().getBaseUrl()
 
 var testdata;
 
@@ -35,8 +40,7 @@ describe('template spec', () => {
 
 
   it('passes', function () {
-    cy.visit('https://d2ufixqq814vug.cloudfront.net/');
-    //elements.logo().should('be.visible');
+    cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)
     signinPage.submit_btn()
