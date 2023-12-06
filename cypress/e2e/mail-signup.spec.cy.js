@@ -10,7 +10,7 @@ const url = new Utility().getBaseUrl()
 
 var testdata;
 
-describe('template spec', () => {
+describe('STWC', () => {
   let userEmail
   let userPass
   let passcode
@@ -39,7 +39,7 @@ describe('template spec', () => {
   })
 
 
-  it('passes', function () {
+  it('SignUp test', function () {
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)

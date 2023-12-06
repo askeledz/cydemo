@@ -10,7 +10,7 @@ const url = new Utility().getBaseUrl()
 
 var testdata;
 
-describe('template spec', () => {
+describe('STWC', () => {
   let userEmail = "karlee.halvorson@ethereal.email"
   let userPass = "n4FtVv24TRT6Af8hBz"
   let passcode
@@ -24,7 +24,7 @@ describe('template spec', () => {
   })
 
 
-  it('passes', function () {
+  it('SignIn test', function () {
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)
