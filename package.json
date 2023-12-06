@@ -8,6 +8,8 @@
   },
   "scripts": {
     "cy:open": "cypress open --browser chrome",
+    "cy:run:qa": "cypress run --env ENV=qa --browser chrome",
+    "cy:run:staging": "cypress run --env ENV=staging --browser chrome",
     "cy:run": "cypress run --browser chrome",
     "cleanup": "rm -fr mochawesome-report",
     "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/output.json",
