@@ -7,10 +7,11 @@ import { Utility } from "../support/utility"
 
 //Call getBaseUrl() to get environment specific url value
 const url = new Utility().getBaseUrl()
+const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe('STWC', () => {
+describe(`STWC - ${envi}: ${url}`, () => {
   let userEmail = "karlee.halvorson@ethereal.email"
   let userPass = "n4FtVv24TRT6Af8hBz"
   let passcode

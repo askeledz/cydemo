@@ -7,10 +7,11 @@ import { Utility } from "../support/utility"
 
 //Call getBaseUrl() to get environment specific url value
 const url = new Utility().getBaseUrl()
+const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe('STWC', () => {
+describe(`STWC - ${envi}: ${url}`, () => {
   let userEmail
   let userPass
   let passcode
@@ -21,6 +22,7 @@ describe('STWC', () => {
       this.testdata = testdata
     })
     cy.viewport(1024, 768)
+
     recurse(
       () => cy.task("createTestEmail"),
       Cypress._.isObject, // keep retrying until the task returns an object
@@ -40,6 +42,7 @@ describe('STWC', () => {
 
 
   it('SignUp test', function () {
+    cy.log(`The environment where the tests are performed: ${envi}: ${url}`)
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)
