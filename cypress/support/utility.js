@@ -5,7 +5,8 @@ let envi = ''
 export class Utility {
     getEnvi() {
         console.log(Cypress.env('ENV'))
-        if (Cypress.env('ENV') == undefined) {
+        //value === undefined || value === null
+        if (Cypress.env('ENV') == undefined || Cypress.env('ENV') == null || Cypress.env('ENV') == '') {
             envi = env
         } else {
             envi = Cypress.env('ENV'); //Get the value of evnironment variable i.e ENV
