@@ -11,7 +11,7 @@ const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe(`STWC - env:${envi}: SUITE: <smoke>`, function () {
+describe(`STWC - env:<${envi}>, suite:<smoke>`, function () {
   let userEmail = "karlee.halvorson@ethereal.email"
   let userPass = "n4FtVv24TRT6Af8hBz"
   let passcode
@@ -27,6 +27,7 @@ describe(`STWC - env:${envi}: SUITE: <smoke>`, function () {
 
   it('SignIn test', function () {
     cy.log(`The environment where the tests are performed: ${envi}: ${url}`)
+    console.log(`The environment where the tests are performed: ${envi}: ${url}`)
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)

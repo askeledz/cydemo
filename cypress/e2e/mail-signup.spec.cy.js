@@ -11,7 +11,7 @@ const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe(`STWC - env:${envi}: SUITE: <regression>`, function () {
+describe(`STWC - env:<${envi}>, suite:<regression>`, function () {
   let userEmail
   let userPass
   let passcode
@@ -43,6 +43,7 @@ describe(`STWC - env:${envi}: SUITE: <regression>`, function () {
 
   it('SignUp test', function () {
     cy.log(`The environment where the tests are performed: ${envi}: ${url}`)
+    console.log(`The environment where the tests are performed: ${envi}: ${url}`)
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)
