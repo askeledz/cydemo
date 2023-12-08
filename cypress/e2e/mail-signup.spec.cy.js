@@ -11,7 +11,7 @@ const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe(`STWC - env:<${envi}>, suite:<regression>`, function () {
+describe(`STWC - env:<${envi}>, suite:<regression>,<all>`, function () {
   let userEmail
   let userPass
   let passcode

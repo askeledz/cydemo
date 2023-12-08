@@ -11,7 +11,7 @@ const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe(`STWC - env:<${envi}>, suite:<smoke>`, function () {
+describe(`STWC - env:<${envi}>, suite:<smoke>,<all>`, function () {
   let userEmail = "karlee.halvorson@ethereal.email"
   let userPass = "n4FtVv24TRT6Af8hBz"
   let passcode
