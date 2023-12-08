@@ -16,5 +16,27 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+//For case it's needed to use deep-equal-in-any-order, chai plugin is needed, so you have to add this code here:
+import deepEqualInAnyOrder from "deep-equal-in-any-order"
+chai.use(deepEqualInAnyOrder)
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
+});
+
+beforeEach(function () {
+  let testSuite = Cypress.env("SUITE");
+  if (!testSuite) {
+    return;
+  }
+  const testName = Cypress.mocha.getRunner().test.fullTitle();
+  testSuite = "<" + testSuite + ">";
+  if (!testName.includes(testSuite)) {
+    this.skip();
+  }
+});

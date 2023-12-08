@@ -11,7 +11,7 @@ const envi = new Utility().getEnvi()
 
 var testdata;
 
-describe(`STWC - ${envi}: ${url}`, () => {
+describe(`STWC - ${envi}: ${url} - SUITE: <regression> <smoke>`, () => {
   let userEmail
   let userPass
   let passcode
