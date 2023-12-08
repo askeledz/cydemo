@@ -4,6 +4,7 @@ let envi = ''
 
 export class Utility {
     getEnvi() {
+        console.log(Cypress.env('ENV'))
         if (Cypress.env('ENV') == undefined) {
             envi = env
         } else {
@@ -20,7 +21,7 @@ export class Utility {
             return "https://d3rf4q5kqya1k5.cloudfront.net/";
         else if (envi == 'dev')
             return "https://d1yynrn0800a33.cloudfront.net/";
-        else (envi == 'prod')
+        else if (envi == 'prod')
         return "https://streamtwc.com/";
     }
 }
