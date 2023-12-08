@@ -35,15 +35,18 @@ describe(`STWC - env:<${envi}>, suite:<regression>`, function () {
     ).then((testAccount) => {
       userEmail = testAccount.user
       userPass = testAccount.pass
+      cy.log('#############################################')
       cy.log(`Email account created - (for debugging purposes): ${userEmail}`)
       cy.log(`Email account password - (for debugging purposes): ${userPass}`)
+      cy.log('#############################################')
     })
   })
 
 
   it('SignUp test', function () {
+    cy.log('#############################################')
     cy.log(`The environment where the tests are performed: ${envi}: ${url}`)
-    console.log(`The environment where the tests are performed: ${envi}: ${url}`)
+    cy.log('#############################################')
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)

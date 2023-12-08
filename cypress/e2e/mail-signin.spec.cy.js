@@ -26,8 +26,9 @@ describe(`STWC - env:<${envi}>, suite:<smoke>`, function () {
 
 
   it('SignIn test', function () {
+    cy.log('#############################################')
     cy.log(`The environment where the tests are performed: ${envi}: ${url}`)
-    console.log(`The environment where the tests are performed: ${envi}: ${url}`)
+    cy.log('#############################################')
     cy.visit(url);
     landingPage.sign_in()
     signinPage.enter_mail(userEmail)
