@@ -5,4 +5,5 @@ Send and Receive emails was done using Ethereal mail and Nodemailer
 
 Main change!!!!!
 
-JIRA-111 A
+- JIRA-111 A
+- JIRA-111 B
