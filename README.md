@@ -4,5 +4,5 @@ Send and Receive emails was done using Ethereal mail and Nodemailer:
 
 Main change!!!
 
-JIRA-99 Fix!! new
-Add somhing!!
+JIRA-99 Fix!!
+JIRA-88 Fix!!
