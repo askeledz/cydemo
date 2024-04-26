@@ -31,4 +31,3 @@ pipeline {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'mochawesome-report', reportFiles: 'output.html', reportName: 'HTML Report', reportTitles: 'Report'])
         }
     }
-}
