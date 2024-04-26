@@ -13,31 +13,16 @@ pipeline {
     tools { nodejs 'Node19' }
 
     stages {
-        stage('Deploying') {
+         stage('Run Cypress Tests') {
             steps {
-                echo 'Deploying the app'
-            }
-        }
-        stage('Testing') {
-            steps {
-                echo 'Running tests'
                 script {
-                        try {
-                        //in case of Win OS use "bat" instead "sh"
-                        sh 'npm install'
-                        //sh "cypress run --env ENV=${env} --env SUITE=${suite} --browser chrome"
-                        sh 'npm run cy:e2e'
-                        }
-                catch (e) {
-                            error("Tests didn't finish successfully: ${e}")
-                }
+                    def exitCode = sh(script: 'npm run cy:e2e', returnStatus: true)
+                    if (exitCode != 0) {
+                        error "Cypress tests failed with exit code ${exitCode}"
+                    }
                 }
             }
         }
-        stage('Building') {
-            steps {
-                echo 'Building the app'
-            }
         }
     }
 
